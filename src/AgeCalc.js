@@ -14,4 +14,8 @@ export default class GalacticAge {
     }
 
 
+    marsAge() {
+        let marsAge = this.userAge / 1.88;
+        this.marsAge = Math.round(marsAge);
+    }
 }
