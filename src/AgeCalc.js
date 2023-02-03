@@ -1,7 +1,6 @@
 export default class GalacticAge {
-    constructor(userAge, previousAge) {
+    constructor(userAge) {
         this.userAge = userAge;
-        this.previousAge = previousAge;
     }
     mercuryAge() {
         let mercuryAge = this.userAge / .24;
@@ -20,18 +19,18 @@ export default class GalacticAge {
         this.jupiterAge = Math.round(jupiterAge);
     }
 
-    yearsPast(){
-    //     let betweenAge = userAge -previousAge;
-    //     let mercuryPast = betweenAge / .24;
-    //     let vensusPast = betweenAge /.62;
-    //     let marsPast = betweenAge /1.88;
-    //     let jupiterPast = betweenAge /11.86;
+    yearsPast(yearsPast) {
+        let yearsPastArray = [];
 
-    //     return betweenAge + " Earth years have passed" +
-    //     mercuryPast + " Mercury years have passed" +
-    //     vensusPast + " Mercury years have passed" +
-    //     marsPast + " Mercury years have passed" +
-    //    jupiterPast + " Mercury years have passed" +
+        let difference = this.userAge - yearsPast;
+        yearsPastArray.push(Math.round(difference).toFixed(2) + " Earth years have passed.");
+        yearsPastArray.push((difference / .24).toFixed(2) + " Mercury years have passed.");
+        yearsPastArray.push(Math.round(difference / .62) + " Venus years have passed.");
+        yearsPastArray.push(Math.round(difference / 1.88) + " Mars years have passed.");
+        yearsPastArray.push(Math.round(difference / 11.86) + " Jupiter years have passed.");
+
+        return yearsPastArray;
+
     }
 
 }
