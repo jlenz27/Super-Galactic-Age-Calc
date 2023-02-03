@@ -34,6 +34,12 @@ describe('GalacticAge', () => {
         expect(userAge.jupiterAge).toEqual(2);
     });
 
+    
+    test("Should return the ages since last birthday", () => {
+        const userAge = new GalacticAge(25,15);
+        userAge.yearsPast();
+        expect(userAge.pastAge).toEqual(10);
+    });
 })
 
 
