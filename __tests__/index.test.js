@@ -35,13 +35,24 @@ describe('GalacticAge', () => {
     });
 
 
-    test("Should return the years passed since entered age", () => {
-        const userAge = new GalacticAge(25);
-        let results = userAge.yearsPast(15);
-        console.debug(results);
+    // test("Should return the years passed since entered age", () => {
+    //     const userAge = new GalacticAge(25);
+    //     let results = userAge.yearsPast(15);
+    //     console.debug(results);
      
-    });
+    // });
 
+    test("Should calculate years since entered date", () => {
+        const userAge = new GalacticAge(25);
+        const futureAge = 15;
+        const yearDifference = (futureAge - userAge);
+        const yearsNeeded = new YearsToCome(userAge, futureAge);
+        expect(yearsNeeded.earthYears).toEqual(yearDifference);
+        expect(yearsNeeded.mercuryYears).toEqual(yearDifference * (1 / .24));
+        expect(yearsNeeded.venusYears).toEqual(yearDifference * (1 / .62));
+        expect(yearsNeeded.marsYears).toEqual(yearDifference / 1.88);
+        expect(yearsNeeded.jupiterYears).toEqual(yearDifference / 11.86);
+      });
 
 
 });
