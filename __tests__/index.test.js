@@ -9,6 +9,12 @@ describe('GalacticAge', () => {
 
     });
 
+    test("Should return the age of a person on mercury",() => {
+        const userAge = new GalacticAge(25);
+        userAge.mercuryAge();
+        expect(userAge.mercuryAge).toEqual(104);
+      })
+
 })
 
 
