@@ -13,7 +13,13 @@ describe('GalacticAge', () => {
         const userAge = new GalacticAge(25);
         userAge.mercuryAge();
         expect(userAge.mercuryAge).toEqual(104);
-      })
+      });
+
+      test("Should return the age of a person on vensus",() => {
+        const userAge = new GalacticAge(25);
+        userAge.vensusAge();
+        expect(userAge.vensusAge).toEqual(40);
+      });
 
 })
 
