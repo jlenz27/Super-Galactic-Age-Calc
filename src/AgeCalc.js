@@ -20,16 +20,16 @@ export default class GalacticAge {
     }
 
     yearsPast(yearsPast) {
-        let yearsPastArray = [];
+        // let yearsPastArray = [];
 
-        let difference = this.userAge - yearsPast;
-        yearsPastArray.push(Math.round(difference).toFixed(2) + " Earth years have passed.");
-        yearsPastArray.push((difference / .24).toFixed(2) + " Mercury years have passed.");
-        yearsPastArray.push(Math.round(difference / .62) + " Venus years have passed.");
-        yearsPastArray.push(Math.round(difference / 1.88) + " Mars years have passed.");
-        yearsPastArray.push(Math.round(difference / 11.86) + " Jupiter years have passed.");
+        // let difference = this.userAge - yearsPast;
+        // yearsPastArray.push(Math.round(difference).toFixed(2) + " Earth years have passed.");
+        // yearsPastArray.push((difference / .24).toFixed(2) + " Mercury years have passed.");
+        // yearsPastArray.push((difference / .62).toFixed(2) + " Venus years have passed.");
+        // yearsPastArray.push((difference / 1.88).toFixed(2) + " Mars years have passed.");
+        // yearsPastArray.push((difference / 11.86).toFixed(2) + " Jupiter years have passed.");
 
-        return yearsPastArray;
+        // return yearsPastArray;
 
     }
 
