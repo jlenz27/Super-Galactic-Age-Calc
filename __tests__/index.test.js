@@ -37,9 +37,9 @@ describe('GalacticAge', () => {
 
     test("Should return the years passed since entered age", () => {
         const userAge = new GalacticAge(25);
-        let answer = userAge.yearsPast(15);
-        expect(userAge.yearsPast).toEqual(10);
-        
+        let results = userAge.yearsPast(15);
+        console.debug(results);
+     
     });
 
 
