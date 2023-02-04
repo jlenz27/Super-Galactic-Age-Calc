@@ -1,6 +1,6 @@
 # (Super Galactic Age Calculator)
 
-#### (Brief Description of Application)
+#### (Application will tell you your age on different planets)
 
 #### By (Your Name Here)
 
