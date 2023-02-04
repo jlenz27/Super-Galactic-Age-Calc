@@ -1,7 +1,8 @@
 export default class GalacticAge {
-    constructor(userAge, pastAge) {
+    constructor(userAge, pastAge, futureAge) {
         this.userAge = userAge;
         this.pastAge = pastAge;
+        this.futureAge = futureAge;
     }
     mercuryAge() {
         let mercuryAge = this.userAge / .24;
@@ -33,16 +34,16 @@ export default class GalacticAge {
 
 
 
-    yearsTill(yearsTill) {
-        let yearsTillArray = [];
-        let difference = yearsTill - this.userAge;
-        yearsTillArray.push(Math.round(difference).toFixed(2) + " Earth years have yet to pass.");
-        yearsTillArray.push((difference / .24).toFixed(2) + " Mercury years have yet to pass.");
-        yearsTillArray.push((difference / .62).toFixed(2) + " Venus years have yet to pass.");
-        yearsTillArray.push((difference / 1.88).toFixed(2) + " Mars years have yet to pass.");
-        yearsTillArray.push((difference / 11.86).toFixed(2) + " Jupiter years have yet to pass.");
+    yearsTill(futureAge, userAge) {
+        // let yearsTillArray = [];
+        // let difference = futureAge - userAge;
+        // yearsTillArray.push(Math.round(difference).toFixed(2) + " Earth years have yet to pass.");
+        // yearsTillArray.push((difference / .24).toFixed(2) + " Mercury years have yet to pass.");
+        // yearsTillArray.push((difference / .62).toFixed(2) + " Venus years have yet to pass.");
+        // yearsTillArray.push((difference / 1.88).toFixed(2) + " Mars years have yet to pass.");
+        // yearsTillArray.push((difference / 11.86).toFixed(2) + " Jupiter years have yet to pass.");
 
-        return yearsTillArray;
+        // return yearsTillArray;
     }
 
 
