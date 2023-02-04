@@ -1,6 +1,7 @@
 export default class GalacticAge {
-    constructor(userAge) {
+    constructor(userAge, pastAge) {
         this.userAge = userAge;
+        this.pastAge = pastAge;
     }
     mercuryAge() {
         let mercuryAge = this.userAge / .24;
@@ -18,20 +19,19 @@ export default class GalacticAge {
         let jupiterAge = this.userAge / 11.86;
         this.jupiterAge = Math.round(jupiterAge);
     }
+    yearsPast( userAge, pastAge) {
+        let difference = userAge - pastAge;
+        let earthDiff = (Math.round(difference).toFixed(2) + " Earth years have passed.");
+        let mercuryDiff = ((difference / .24).toFixed(2) + " Mercury years have passed.");
+        let vensusDiff = ((difference / .62).toFixed(2) + " Venus years have passed.");
+        let marsDiff = ((difference / 1.88).toFixed(2) + " Mars years have passed.");
+        let jupiterDiff = ((difference / 11.86).toFixed(2) + " Jupiter years have passed.");
 
-    yearsPast(pastAge) {
-        let yearsPastArray = [];
-
-        let difference = this.userAge - pastAge;
-        yearsPastArray.push(Math.round(difference).toFixed(2) + " Earth years have passed.");
-        yearsPastArray.push((difference / .24).toFixed(2) + " Mercury years have passed.");
-        yearsPastArray.push((difference / .62).toFixed(2) + " Venus years have passed.");
-        yearsPastArray.push((difference / 1.88).toFixed(2) + " Mars years have passed.");
-        yearsPastArray.push((difference / 11.86).toFixed(2) + " Jupiter years have passed.");
-
-        return yearsPastArray;
+        return earthDiff + mercuryDiff + vensusDiff +marsDiff + jupiterDiff;
 
     }
+
+
 
     yearsTill(yearsTill) {
         let yearsTillArray = [];
@@ -41,10 +41,10 @@ export default class GalacticAge {
         yearsTillArray.push((difference / .62).toFixed(2) + " Venus years have yet to pass.");
         yearsTillArray.push((difference / 1.88).toFixed(2) + " Mars years have yet to pass.");
         yearsTillArray.push((difference / 11.86).toFixed(2) + " Jupiter years have yet to pass.");
-    
+
         return yearsTillArray;
     }
 
-    
+
 
 }
