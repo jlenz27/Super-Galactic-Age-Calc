@@ -34,16 +34,16 @@ export default class GalacticAge {
 
 
 
-    yearsTill(futureAge, userAge) {
-        // let yearsTillArray = [];
-        // let difference = futureAge - userAge;
-        // yearsTillArray.push(Math.round(difference).toFixed(2) + " Earth years have yet to pass.");
-        // yearsTillArray.push((difference / .24).toFixed(2) + " Mercury years have yet to pass.");
-        // yearsTillArray.push((difference / .62).toFixed(2) + " Venus years have yet to pass.");
-        // yearsTillArray.push((difference / 1.88).toFixed(2) + " Mars years have yet to pass.");
-        // yearsTillArray.push((difference / 11.86).toFixed(2) + " Jupiter years have yet to pass.");
+    yearsTill(userAge, futureAge) {
+        
+        let difference = futureAge - userAge;
+        let earthDiff =(Math.round(difference).toFixed(2) + " Earth years have yet to pass.");
+        let mercuryDiff =((difference / .24).toFixed(2) + " Mercury years have yet to pass.");
+        let vensusDiff =((difference / .62).toFixed(2) + " Venus years have yet to pass.");
+        let marsDiff =((difference / 1.88).toFixed(2) + " Mars years have yet to pass.");
+        let jupiterDiff =((difference / 11.86).toFixed(2) + " Jupiter years have yet to pass.");
 
-        // return yearsTillArray;
+        return earthDiff + mercuryDiff + vensusDiff +marsDiff + jupiterDiff;
     }
 
 
