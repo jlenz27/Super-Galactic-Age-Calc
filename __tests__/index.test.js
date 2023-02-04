@@ -35,12 +35,6 @@ describe('GalacticAge', () => {
     });
 
 
-    // test("Should return the years passed since entered age", () => {
-    //     const userAge = new GalacticAge(25);
-    //     let results = userAge.yearsPast(15);
-    //     console.debug(results);
-
-    // });
 
     test("Should calculate years since entered date", () => {
         const userAge = new GalacticAge(25, 15);
