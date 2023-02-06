@@ -42,12 +42,12 @@ describe('GalacticAge', () => {
         expect(userAge.pastAge).toEqual(15);
     });
 
-    // test("Should calculate years since entered date", () => {
-    //     const userAge = new GalacticAge(25, 15, 35);
-    //     userAge.yearsTill();
-    //     expect(userAge.yearsTill).toEqual();
-    // });
+    test("Should return that the output is a function", () => {
+        const userAge = new GalacticAge(25,30);
+        userAge.yearsTill(25,30);
+        expect(userAge.yearsTill).toBeInstanceOf(Function);
 
+    });
 
 });
 
