@@ -32,8 +32,6 @@ export default class GalacticAge {
 
     }
 
-
-
     yearsTill(userAge, futureAge) {
         
         let difference = futureAge - userAge;
@@ -45,7 +43,5 @@ export default class GalacticAge {
 
         return earthDiff + mercuryDiff + vensusDiff +marsDiff + jupiterDiff;
     }
-
-
 
 }
