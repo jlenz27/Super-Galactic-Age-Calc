@@ -39,16 +39,15 @@ describe('GalacticAge', () => {
     test("Should calculate years since entered date", () => {
         const userAge = new GalacticAge(25, 15);
         userAge.yearsPast();
-        expect(userAge.pastAge).toEqual(15);
+        expect(userAge.yearsPast(25,15)).toBe("10.00 Earth years have passed.41.67 Mercury years have passed.16.13 Venus years have passed.5.32 Mars years have passed.0.84 Jupiter years have passed.");
     });
 
-    test("Should return that the output is a function", () => {
+    test("Should calculate years since entered date", () => {
         const userAge = new GalacticAge(25,30);
-        userAge.yearsTill(25,30);
-        expect(userAge.yearsTill).toBeInstanceOf(Function);
+        userAge.yearsTill();
+        expect(userAge.yearsTill(25,35)).toBe("10.00 Earth years have yet to pass.41.67 Mercury years have yet to pass.16.13 Venus years have yet to pass.5.32 Mars years have yet to pass.0.84 Jupiter years have yet to pass.");
 
     });
-
 });
 
 
